@@ -1,10 +1,12 @@
+## Live Demo
+You can view the live project here: [Hosted Link](https://nileshtiwari04.github.io/Multi-Search-Engine-javascript//Multi_Search_Engine-main/Multi_Search_Engine-main/)
 # Search Engine Project 
 ##  <img style=" width: 25px;" src="./assest/images/search-logo.png" alt="Search iT"> Search iT
 
 Welcome to the Search Engine Project! This project aims to integrate multiple search APIs to provide users with a comprehensive search experience.
 
 ## Features
-
+- **You can Use microphone for Search**:
 - **Google Search Integration**: Fetch real-time search results using the Google Search API. Support for advanced search features such as filtering and relevance.
 - **Gemini Search Integration**: Seamlessly switch between Google and Gemini search engines for alternative search experiences.
 - **Wikipedia Search Integration**: Retrieve concise and relevant information from Wikipedia articles directly.
