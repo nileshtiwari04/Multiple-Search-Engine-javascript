@@ -14,6 +14,57 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Generic search function
+// Function to perform a search based on the selected engine
+function performSearch(query, engine) {
+    let url;
+    switch (engine) {
+        case 'google':
+            url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`;
+            break;
+        case 'wikipedia':
+            url = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=100&srsearch=${encodeURIComponent(query)}`;
+            break;
+        case 'duckduckgo':
+            url = `https://api.duckduckgo.com/?q=${encodeURIComponent(query)}&format=json`;
+            break;
+        case 'bing':
+            url = `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
+            break;
+        case 'yahoo':
+            url = `https://search.yahoo.com/search?p=${encodeURIComponent(query)}`;
+            break;
+        default:
+            alert('Invalid search engine');
+            return;
+    }
+    // Open the search results in a new tab/window
+    window.open(url, '_blank');
+}
+
+// Event listeners for new buttons
+document.querySelector('.duckduckgo-search-btn').addEventListener('click', function() {
+    const query = document.querySelector('input[type="search"]').value;
+    performSearch(query, 'duckduckgo');
+});
+
+document.querySelector('.bing-search-btn').addEventListener('click', function() {
+    const query = document.querySelector('input[type="search"]').value;
+    performSearch(query, 'bing');
+});
+
+document.querySelector('.yahoo-search-btn').addEventListener('click', function() {
+    const query = document.querySelector('input[type="search"]').value;
+    performSearch(query, 'yahoo');
+});
+
+// Event listeners for new buttons
+document.querySelector('.duckduckgo-search-btn').addEventListener('click', function() {
+    const query = document.querySelector('input[type="search"]').value;
+    performSearch(query, 'duckduckgo');
+});
+
+
 // -----------------  Dark mode -----------------------
 //theme button
 

@@ -156,6 +156,24 @@ h1>img{
         background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
     }
 }
+.btn-animation {
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-animation:hover {
+    background-color: #0072cf;
+    transform: scale(1.05);
+}
+
+.search-box input {
+    border: 2px solid #0072cf;
+    transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #005499;
+}
+
 .btn-animation .animate::after{
     bottom: 50%;
     background-image: radial-gradient(circle, #008cff 20%, transparent 20%),
@@ -187,18 +205,29 @@ h1>img{
 
 
 /* Search box styling */
-.search-box{
+.search-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 7px;
-    width: 100%;
-    overflow: hidden;
     border-radius: 25px;
+    width: 100%;
     max-width: 720px;
     margin-bottom: 16px;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
 }
+
+.search-box input {
+    border: none;
+    padding: 16px;
+    border-radius: 25px;
+    flex: 1;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
 
 /* Search box input styling */
 .search-box input{
